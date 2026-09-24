@@ -1,2 +1,4 @@
+Executive Summary:
+
 Using 15,861 rental records, we engineered the target rental duration (0–9 days, mean 4.53) and 14 predictors (including amount, rates, length, ratings, and special-feature flags), confirming high multicollinearity among polynomial terms and retaining genuine amount outliers. After an 80/20 split, Random Forest delivered the best performance (test MSE 2.03, R² 0.71, MAE ≈ 1.1 days), far surpassing linear models and meeting the MSE ≤ 3 target, with amount and amount² driving ~60 % of predictive power. Deploy this Random Forest model for daily inventory forecasting, use its predictions to set dynamic safety-stock levels by title, monitor large amount–duration deviations for late-fee alerts, and plan a next iteration that adds customer history and day-of-week effects to further improve accuracy.
 
